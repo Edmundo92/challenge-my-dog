@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #797F84;
+  height: 100vh;
+}
+
+.back-modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .7);
+}
+.modal {
+  height: 150px;
+  width: 290px;
+  background-color: white;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-modal {
+  padding: 8px 30px;
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dog-image-content {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 120px;
+  border: 6px solid #101317;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container-name-dog {
+  background-color: #101317;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  flex: 1;
+}
+.content1{
+  background-color: #E6BD2F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content2{
+  background-color: #101317;
+}
+
+.dog-name-content {
+  color: black;
+  font-weight: bolder;
+  font-size: 22px;
+  background-color: white;
+  padding: 10px 20px;
+  max-width: 214px;
+  transition: .4s ease-in-out;
+  overflow: hidden;
+}
+
+
+/* lado 2 */
+.form-container {
+  width: 70%;
+  margin: 45px auto;
+}
+.field-container {
+  margin-bottom: 25px;
+}
+.field-container select, .field-input{
+  height: 45px;
+  width: 100%;
+  background-color: white;
+  border-color: white;
+  border-radius: 3px;
+}
+.field-input {
+  padding-left: 5px;
+}
+.field-container label, .pallete-container label {
+  display: inline-block;
+  color: white;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.pallete-container {
+  margin-bottom: 25px;
+}
+.pallete-container label {
+
+}
+.pallete {
+  display: flex;
+  justify-content: center;
+}
+.color-item {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin: 0 7px;
+}
+.color-item1 {
+  background-color: steelblue;
+}
+.color-item2 {
+  background-color: purple;
+}
+.color-item3 {
+  background-color: pink;
+}
+.color-item4 {
+  background-color: brown;
+}
+.color-item5 {
+  background-color: blueviolet;
+}
+
+.button {
+  background-color: #E6BD2F;
+  border-color: #E6BD2F;
+  height: 45px;
+  width: 100%;
+  font-size: 19px;
+  color: #101317;
+  font-weight: bolder;
+}
+
+@media (min-width: 902px) {
+  .box-container {
+    height: 90%;
+    width: 90%;
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .dog-image-content {
+    height: 200px;
+    width: 200px;
+  }
+
+  .container-name-dog {
+    height: 250px;
+    width: 250px;
+  }
+
+  .form-container {
+    width: 70%;
+    margin: 100px auto;
+  }
+}
