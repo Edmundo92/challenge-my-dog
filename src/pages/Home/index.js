@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import storage from '../../util/storage';
+import {dateTime} from '../../util/date-time';
 
 const Home = () => {
     const API = "https://dog.ceo/api/breeds/list/all";
@@ -64,7 +65,8 @@ const Home = () => {
     }
 
     function salvar() {
-        storage.set({ font, nameDog, color, imageDog, dog });
+        const date_time = dateTime();
+        storage.set({ font, nameDog, color, imageDog, dog, date_time });
         setHideOrShowModal(false);
     }
 
@@ -76,9 +78,7 @@ const Home = () => {
             res.json().then((data) => {
                 setImageDog(data.message);
             })
-            .catch((error) => {
-                console.log(error);
-            });
+            .catch((error) => {});
         })
     }
 
@@ -87,10 +87,7 @@ const Home = () => {
             <div className="box-container">
                 <div className="content content1">
                     <div className="dogAndName">
-                        {/* <div
-                        style={{ backgroundImage: imageDog.length > 0 ? `url(${imageDog})` : "url(https://cdn0.iconfinder.com/data/icons/dog-avatars/192/avatar-dog-saint-bernard-puppy-512.png)", backgroundRepeat: 'no-repeat', backgroundSize: 'contain' }}
-                        className="dog-image-content"></div> */}
-                        <img className="dog-image-content" src={imageDog.length > 0 ? imageDog : "https://cdn0.iconfinder.com/data/icons/dog-avatars/192/avatar-dog-saint-bernard-puppy-512.png"} />
+                        <img className="dog-image-content" src={imageDog.length > 0 ? imageDog : "https://cdn0.iconfinder.com/data/icons/dog-avatars/192/avatar-dog-saint-bernard-puppy-512.png"} alt={dog}/>
                         <div className="container-name-dog">
                             <span className="dog-name-content" style={styles}>{ nameDog }</span>
                         </div>
